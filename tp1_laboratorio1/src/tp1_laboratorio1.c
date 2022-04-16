@@ -1,0 +1,104 @@
+/*
+ ============================================================================
+ Name        : tp1_laboratorio1.c
+ Author      : Ivan Alejandro Hermo
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Functions_v1.15.4.2022.h" /*librería de funciones utilizadas en el programa para la ejecución de
+                                    distintas acciones según se requieran en las distintas opciones ofrecidas*/
+
+
+int main(){
+
+    int opcion;             //variable de control para las iteraciones (si vale 6, el programa finaliza)
+    int x; //kilometros
+    int y; //aerolineas     //variables x, y, z declaradas y utilizadas para la carga de datos
+    int z; //latam
+    int flagSeguir = 0;
+    int flagKm = 0;         // los tres flags son utilizados para verificar que el usuario no pueda ejecutar
+    int flagEmpresa = 0;    //acciones consecuentes sin antes haber cargado los datos necesarios, por ejemplo
+                            //no poder calcular costos sin antes haber ingresado la cantidad de kilómetros
+
+    do{
+        menuPrincipal();        //iteración do while para que el programa se ejecute al menos una vez, y tantas
+        fflush(stdin);          // veces como el usuario desea hasta que seleccione la opción indicada para finalizar
+        scanf("%d", &opcion);
+
+        switch(opcion){         //a través del switch, el código ejecutará la acción deseada en correlación
+                                // a las opciones que ofrece el menu en base al dígito (la opción) que el
+            case 1:             // usuario introduce en la consola de comandos
+                printf("\nIngresar Kilometros: ");
+                fflush(stdin);
+                scanf("%d", &x);
+                printf("Ingreso %d km\n", x);
+                flagKm = 1;
+                system("pause");
+                break;
+            case 2:
+                if(flagKm == 0){
+                    printf("\nNo puede seleccionar una empresa sin antes indicar la cantidad de kilometros\n");
+                    system("pause");
+                }else{
+                    printf("\nPrecio vuelo Aerolineas: ");
+                    fflush(stdin);
+                    scanf("%d", &y);
+                    printf("\nPrecio vuelo Latam: ");
+                    fflush(stdin);
+                    scanf("%d", &z);
+                    printf("\nIngreso $ %d para Aerolineas y $ %d para Latam\n", y, z);
+                    system("pause");
+                    flagEmpresa = 1;
+                    }
+                break;
+            case 3: /*No entendí la diferencia entre la consigna 3 y 4, o sea, me pareció que eran
+                exactamente lo mismo, por ende, redundante mostrar dos veces la misma cosa
+                en 2 menús diferentes, en consecuencia solamente agregé una línea de
+                mensaje para la opción 3 del menú */
+                if(flagKm == 1 && flagEmpresa == 1){
+                printf("Cuentas ejecutadas, vaya al menu 4 para ver los resultados\n");
+                }else{
+                printf("Para generar los calculos debe haber ingresado los kilometros y los precios por empresas\n");
+                }system("pause");
+                break;
+            case 4:
+                fflush(stdin);
+                if(flagKm == 1 && flagEmpresa == 1){
+                printf("\nAerolineas\n");
+                calculoMultiple(x, y);
+                printf("\nLatam\n");
+                calculoMultiple(x, y = z);}else{
+                printf("\nPara Ejecutar los calculos debe haber ingresado los kilometros y luego los costos por empresa\n");}
+                system("pause");
+                break;
+            case 5:
+                fflush(stdin);
+                x = 7090;
+                y = 162965;
+                z = 159339;
+                printf("\nAerolineas\n");
+                calculoMultiple(x, y);
+                printf("\nLatam\n");
+                calculoMultiple(x, y = z);
+                int diferencia = calculoDiferencia(&x, &y, &z);
+                printf("\nLa diferencia es %d\n", diferencia);
+                system("pause");
+                break;
+            case 6:
+                flagSeguir = 1;
+                printf("\nPrograma Finalizado\n");
+                break;
+            default:
+                printf("\nOpcion Invalida\n");
+                system("pause");
+        }
+
+    }while(flagSeguir == 0);
+
+    return 0;
+}

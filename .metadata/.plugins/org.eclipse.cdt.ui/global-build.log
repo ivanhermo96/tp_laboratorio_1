@@ -1,0 +1,96 @@
+15:39:47 **** Rebuild of configuration Debug for project TP_1_Laboratorio_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Laboratorio_1.o" "..\\src\\TP_1_Laboratorio_1.c" 
+gcc -o TP_1_Laboratorio_1.exe "src\\TP_1_Laboratorio_1.o" 
+Info: Nothing to build for TP_1_Laboratorio_1
+15:42:39 **** Incremental Build of configuration Debug for project TP_1_Laboratorio_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Laboratorio_1.o" "..\\src\\TP_1_Laboratorio_1.c" 
+..\src\TP_1_Laboratorio_1.c: In function 'main':
+..\src\TP_1_Laboratorio_1.c:88:52: warning: passing argument 1 of 'calculoDiferencia' makes integer from pointer without a cast [-Wint-conversion]
+   88 |                 int diferencia = calculoDiferencia(&x, &y, &z);
+      |                                                    ^~
+      |                                                    |
+      |                                                    int *
+In file included from ..\src\TP_1_Laboratorio_1.c:14:
+..\src\Functions_v1.15.4.2022.h:29:27: note: expected 'int' but argument is of type 'int *'
+   29 | int calculoDiferencia(int x, int y, int z);
+      |                       ~~~~^
+..\src\TP_1_Laboratorio_1.c:88:56: warning: passing argument 2 of 'calculoDiferencia' makes integer from pointer without a cast [-Wint-conversion]
+   88 |                 int diferencia = calculoDiferencia(&x, &y, &z);
+      |                                                        ^~
+      |                                                        |
+      |                                                        int *
+In file included from ..\src\TP_1_Laboratorio_1.c:14:
+..\src\Functions_v1.15.4.2022.h:29:34: note: expected 'int' but argument is of type 'int *'
+   29 | int calculoDiferencia(int x, int y, int z);
+      |                              ~~~~^
+..\src\TP_1_Laboratorio_1.c:88:60: warning: passing argument 3 of 'calculoDiferencia' makes integer from pointer without a cast [-Wint-conversion]
+   88 |                 int diferencia = calculoDiferencia(&x, &y, &z);
+      |                                                            ^~
+      |                                                            |
+      |                                                            int *
+In file included from ..\src\TP_1_Laboratorio_1.c:14:
+..\src\Functions_v1.15.4.2022.h:29:41: note: expected 'int' but argument is of type 'int *'
+   29 | int calculoDiferencia(int x, int y, int z);
+      |                                     ~~~~^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Functions_v1.15.4.2022.o" "..\\src\\Functions_v1.15.4.2022.c" 
+gcc -o TP_1_Laboratorio_1.exe "src\\Functions_v1.15.4.2022.o" "src\\TP_1_Laboratorio_1.o" 
+Info: Nothing to build for TP_1_Laboratorio_1
+15:45:16 **** Incremental Build of configuration Debug for project TP_1_Laboratorio_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Laboratorio_1.o" "..\\src\\TP_1_Laboratorio_1.c" 
+..\src\TP_1_Laboratorio_1.c: In function 'main':
+..\src\TP_1_Laboratorio_1.c:88:52: warning: passing argument 1 of 'calculoDiferencia' makes integer from pointer without a cast [-Wint-conversion]
+   88 |                 int diferencia = calculoDiferencia(&x, &y, &z);
+      |                                                    ^~
+      |                                                    |
+      |                                                    int *
+In file included from ..\src\TP_1_Laboratorio_1.c:14:
+..\src\Functions_v1.15.4.2022.h:29:27: note: expected 'int' but argument is of type 'int *'
+   29 | int calculoDiferencia(int x, int y, int z);
+      |                       ~~~~^
+..\src\TP_1_Laboratorio_1.c:88:56: warning: passing argument 2 of 'calculoDiferencia' makes integer from pointer without a cast [-Wint-conversion]
+   88 |                 int diferencia = calculoDiferencia(&x, &y, &z);
+      |                                                        ^~
+      |                                                        |
+      |                                                        int *
+In file included from ..\src\TP_1_Laboratorio_1.c:14:
+..\src\Functions_v1.15.4.2022.h:29:34: note: expected 'int' but argument is of type 'int *'
+   29 | int calculoDiferencia(int x, int y, int z);
+      |                              ~~~~^
+..\src\TP_1_Laboratorio_1.c:88:60: warning: passing argument 3 of 'calculoDiferencia' makes integer from pointer without a cast [-Wint-conversion]
+   88 |                 int diferencia = calculoDiferencia(&x, &y, &z);
+      |                                                            ^~
+      |                                                            |
+      |                                                            int *
+In file included from ..\src\TP_1_Laboratorio_1.c:14:
+..\src\Functions_v1.15.4.2022.h:29:41: note: expected 'int' but argument is of type 'int *'
+   29 | int calculoDiferencia(int x, int y, int z);
+      |                                     ~~~~^
+gcc -o TP_1_Laboratorio_1.exe "src\\Functions_v1.15.4.2022.o" "src\\TP_1_Laboratorio_1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Laboratorio_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:46:22 **** Incremental Build of configuration Debug for project TP_1_Laboratorio_1 ****
+Info: Internal Builder is used for build
+gcc -o TP_1_Laboratorio_1.exe "src\\Functions_v1.15.4.2022.o" "src\\TP_1_Laboratorio_1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Laboratorio_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:47:07 **** Incremental Build of configuration Debug for project TP_1_Laboratorio_1 ****
+Info: Internal Builder is used for build
+gcc -o TP_1_Laboratorio_1.exe "src\\Functions_v1.15.4.2022.o" "src\\TP_1_Laboratorio_1.o" 
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
+Info: Nothing to build for TP_1_Laboratorio_1
